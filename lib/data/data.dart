@@ -38,8 +38,8 @@ final seats = [
   section6,
 ];
 
-/*const seatTypes = [
+const seatTypes = [
   SeatType(name: 'Available', color: Colors.grey),
   SeatType(name: 'Booked', color: Colors.black),
   SeatType(name: 'Selection', color: Colors.primaryColor),
-];*/
+];
