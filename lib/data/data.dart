@@ -45,6 +45,6 @@ const seatTypes = [
 ];
 
 const dates =[
-  MovieDate(day: 11, month: 'DCT', hour: '6:00PM')
+  MovieDate(day: 11, month: 'DCT', hour: '6:00PM'),
   
 ]
