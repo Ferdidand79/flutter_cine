@@ -48,7 +48,7 @@ class Seat {
   Seat(
       {required this.isHidden,
       required this.isOcuppied,
-      this.isSelected = false});
+      this.isSelected = false,});
 }
 
 class SeatType {
