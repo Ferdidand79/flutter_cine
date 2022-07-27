@@ -41,6 +41,6 @@ final seats = [
 const seatTypes = [
   SeatType(name: 'Available', color: Colors.grey),
   SeatType(name: 'Booked', color: Colors.black),
-  SeatType(name: 'Selection', color: AppColors.primaryColor)
+  SeatType(name: 'Selection', color: AppColors.primaryColor),
 ];
 
