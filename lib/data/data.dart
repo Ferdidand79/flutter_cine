@@ -28,7 +28,7 @@ final section6 = List.generate(
     20,
     (index) =>
         Seat(isHidden: [].contains(index), isOcuppied: [14].contains(index)));
-        
+
 final seats = [
   section1,
   section2,
@@ -44,3 +44,75 @@ const seatTypes = [
   SeatType(name: 'Selection', color: AppColors.primaryColor),
 ];
 
+const dates = [
+  MovieDate(day: 11, month: 'OCT', hour: '6:00PM'),
+  MovieDate(day: 11, month: 'OCT', hour: '8:00PM'),
+  MovieDate(day: 11, month: 'OCT', hour: '9:00PM'),
+  MovieDate(day: 11, month: 'OCT', hour: '10:00PM'),
+];
+
+final movies = [
+  Movie(
+    name: 'Greta ',
+    image: 'assets/images/greta.jpg',
+    screenPreview: 'assets/image/greta.jpg',
+    description: 
+      'A kind-hearted street urchin and a power-hungry Grand Vizier vie for '
+      'a magic lamp that has the power to make their deepest wishses come true.',
+    type: 'Fantasy',
+    hours: 2,
+    director: 'Ritchie',
+    stars: 5,
+    actors: [
+      'Jeff Hille',
+      'Jane Perry',
+      'Colm Feore',
+      'Isabella Hupper',
+      'Stephen Rea',
+    ],
+    dates: dates,
+    seats: seats,
+  ),
+  Movie(
+    name: 'Aladdin ',
+    image: 'assets/images/aladdin.jpg',
+    screenPreview: 'assets/images/aladdin.jpg',
+    description:
+        'A kind-hearted street urchin and a power-hungry Grand Vizier vie for '
+        'a magic lamp that has the power to make their deepest wishses come true.',
+    type: 'Fantasy',
+    hours: 2,
+    director: 'Ritchie',
+    stars: 5,
+    actors: [
+      'Will Smith',
+      'Joey Ansah',
+      'Naomi Scott',
+      'Marwan Kenzari',
+      'Nasim Pedrad',
+    ],
+    dates: dates,
+    seats: seats,
+  ),
+  Movie(
+    name: 'Aladdin 2 ',
+    image: 'assets/images/aladdin_2.jpg',
+    screenPreview: 'assets/images/aladdin_2.jpg',
+    description:
+        'A kind-hearted street urchin and a power-hungry Grand Vizier vie for '
+        'a magic lamp that has the power to make their deepest wishses come true.',
+    type: 'Fantasy',
+    hours: 2,
+    director: 'Ritchie',
+    stars: 5,
+    actors: [
+      'Will Smith',
+      'Joey Ansah',
+      'Naomi Scott',
+      'Marwan Kenzari',
+      'Nasim Pedrad',
+    ],
+    dates: dates,
+    seats: seats,
+  ),
+];
