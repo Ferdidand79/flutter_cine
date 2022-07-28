@@ -1,3 +1,5 @@
+//import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cine/data/models/movies.dart';
 import 'package:flutter_cine/constants/constants.dart';
@@ -56,9 +58,9 @@ final movies = [
     name: 'Greta ',
     image: 'assets/images/greta.jpg',
     screenPreview: 'assets/image/greta.jpg',
-    description: 
-      'A kind-hearted street urchin and a power-hungry Grand Vizier vie for '
-      'a magic lamp that has the power to make their deepest wishses come true.',
+    description:
+        'A kind-hearted street urchin and a power-hungry Grand Vizier vie for '
+        'a magic lamp that has the power to make their deepest wishses come true.',
     type: 'Fantasy',
     hours: 2,
     director: 'Ritchie',
