@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'widgets/wid'
 
 class MoviePage extends StatefulWidget {
   const MoviePage({Key? key}) : super(key: key);
@@ -20,7 +21,17 @@ class _MoviePageState extends State<MoviePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        bottom: TabBar(
+          controller: _tabController,
+          isScrollable: true,
+          tabs: const [
+            Tab(text: 'Movie'),
+            Tab(text: 'Series'),
+            Tab(text: 'Tv Show'),
+          ],
+        ),
+      ),
     );
   }
 
