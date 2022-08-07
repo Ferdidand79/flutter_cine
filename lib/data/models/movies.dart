@@ -45,15 +45,14 @@ class Seat {
   final bool isOcuppied;
   bool isSelected;
 
-  Seat(
-      {required this.isHidden,
+  Seat({required this.isHidden,
       required this.isOcuppied,
       this.isSelected = false,});
 }
 
 class SeatType {
   final String name;
-  final Colors color;
+  final Color color;
 
   const SeatType({
     required this.name,
