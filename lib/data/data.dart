@@ -76,7 +76,7 @@ final movies = [
     seats: seats,
   ),
   Movie(
-    name: 'Aladdin ',
+    name: 'Aladdin',
     image: 'assets/images/aladdin.jpg',
     screenPreview: 'assets/images/aladdin.jpg',
     description:
