@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cine/pages/movies/widgets/dot_tab_indicator.dart';
-//import 'widgets/widgets.dart';
+//import 'package:flutter_cine/pages/movies/widgets/dot_tab_indicator.dart';
+import 'widgets/widgets.dart';
 
 class MoviePage extends StatefulWidget {
   const MoviePage({Key? key}) : super(key: key);
@@ -22,23 +22,23 @@ class _MoviePageState extends State<MoviePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        bottom: TabBar(
-          controller: _tabController,
-          isScrollable: true,
-          indicator: const DotIndicator(),
-          tabs: const [
-            Tab(text: 'Movie'),
-            Tab(text: 'Series'),
-            Tab(text: 'Tv Show'),
-          ],
+        appBar: AppBar(
+          bottom: TabBar(
+            controller: _tabController,
+            isScrollable: true,
+            indicator: const DotIndicator(),
+            tabs: const [
+              Tab(text: 'Movie'),
+              Tab(text: 'Series'),
+              Tab(text: 'Tv Show'),
+            ],
+          ),
         ),
-      ),
-      body: TabBarView(
-        controller: _tabController,
-        children:
-      )
-    );
+        body: TabBarView(controller: _tabController, children: const [
+          MoviesView(),
+          SizedBox.expand(),
+          SizedBox.expand(),
+        ]));
   }
 
   @override
