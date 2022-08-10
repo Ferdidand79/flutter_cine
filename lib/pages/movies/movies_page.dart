@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'widgets/wid'
+import 'package:flutter_cine/pages/movies/widgets/dot_tab_indicator.dart';
+//import 'widgets/widgets.dart';
 
 class MoviePage extends StatefulWidget {
   const MoviePage({Key? key}) : super(key: key);
@@ -25,6 +26,7 @@ class _MoviePageState extends State<MoviePage>
         bottom: TabBar(
           controller: _tabController,
           isScrollable: true,
+          indicator: const DotIndicator(),
           tabs: const [
             Tab(text: 'Movie'),
             Tab(text: 'Series'),
@@ -32,6 +34,10 @@ class _MoviePageState extends State<MoviePage>
           ],
         ),
       ),
+      body: TabBarView(
+        controller: _tabController,
+        children:
+      )
     );
   }
 
