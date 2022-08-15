@@ -33,13 +33,32 @@ class _MoviesViewState extends State<MoviesView> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final h = constraints.maxHeight;
+        final w = constraints.maxWidth;
+
+        return Column(
+          children: [
+            const Spacer(),
+            //Movie cards
+            SizedBox(
+              height: h*0.6,
+            ),
+            const Spacer(),
+            //Movie Details
+            SizedBox(
+              height: h*0.25,
+            )
+          ],
+        );
+      },
+    );
   }
 
   _movieDetailsPercentListener() {
     setState(() {
       _movieCardPage = _movieCardPageController.page!;
-      ;
       _movieCardIndex = _movieCardPageController.page!.round();
     });
   }
