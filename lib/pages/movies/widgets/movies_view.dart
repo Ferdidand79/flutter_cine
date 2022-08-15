@@ -1,6 +1,8 @@
-import 'dart:ffi';
+//import 'dart:ffi';
+//import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
+
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -21,7 +23,7 @@ class _MoviesViewState extends State<MoviesView> {
   final _showMovieDetails = ValueNotifier(true);
 
   @override
-  Void initState() {
+  void initState() {
     _movieCardPageController = PageController(viewportFraction: 0.77)
       ..addListener(_movieCardPageListener);
     _movieDetailPageController = PageController()
