@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_cine/data/data.dart';
 
 class MoviesView extends StatefulWidget {
   const MoviesView({Key? key}) : super(key: key);
@@ -43,12 +44,25 @@ class _MoviesViewState extends State<MoviesView> {
             const Spacer(),
             //Movie cards
             SizedBox(
-              height: h*0.6,
-            ),
+                height: h * 0.6,
+                child: PageView.builder(
+                  controller: _movieCardPageController,
+                  clipBehavior: Clip.none,
+                  itemCount: movies.length,
+                  itemBuilder: (_, index) {
+                  final movie = movies[index];
+                  return Container(
+                    decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage(movie.image),
+                        fit: BoxFit.cover,
+                        ),
+                    ),
+                  );
+                })),
             const Spacer(),
             //Movie Details
             SizedBox(
-              height: h*0.25,
+              height: h * 0.25,
             )
           ],
         );
