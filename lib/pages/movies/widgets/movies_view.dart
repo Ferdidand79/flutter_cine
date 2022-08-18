@@ -1,6 +1,8 @@
 //import 'dart:ffi';
 //import 'dart:ui' as ui;
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter/src/foundation/key.dart';
@@ -46,19 +48,36 @@ class _MoviesViewState extends State<MoviesView> {
             SizedBox(
                 height: h * 0.6,
                 child: PageView.builder(
-                  controller: _movieCardPageController,
-                  clipBehavior: Clip.none,
-                  itemCount: movies.length,
-                  itemBuilder: (_, index) {
-                  final movie = movies[index];
-                  return Container(
-                    decoration: BoxDecoration(
-                        image: DecorationImage(image: AssetImage(movie.image),
-                        fit: BoxFit.cover,
+                    controller: _movieCardPageController,
+                    clipBehavior: Clip.none,
+                    itemCount: movies.length,
+                    itemBuilder: (_, index) {
+                      final movie = movies[index];
+                      final progress = (index - _movieCardPage);
+                      final scale = lerpDouble(1, .8, progress.abs())!;
+                      final isScrolling = _movieCardPageController
+                          .position.isScrollingNotifier.value;
+                      final isCurrenntPage = index == _movieCardIndex;
+                      final isFirstPage = index == 0;
+
+                      return Center(
+                        child: Container(
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(movie.image),
+                                fit: BoxFit.cover,
+                              ),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(70)),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black.withOpacity(.2),
+                                    blurRadius: 25,
+                                    offset: const Offset(0, 25))
+                              ]),
                         ),
-                    ),
-                  );
-                })),
+                      );
+                    })),
             const Spacer(),
             //Movie Details
             SizedBox(
