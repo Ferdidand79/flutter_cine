@@ -55,7 +55,7 @@ const dates = [
 
 final movies = [
   Movie(
-    name: 'Greta 03',
+    name: 'Greta 04',
     image: 'assets/images/greta.jpg',
     screenPreview: 'assets/image/greta.jpg',
     description:
