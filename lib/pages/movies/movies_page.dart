@@ -30,7 +30,7 @@ class _MoviePageState extends State<MoviePage>
             tabs: const [
               Tab(text: 'Movie'),
               Tab(text: 'Series'),
-              Tab(text: 'Tv Show 01'),
+              Tab(text: 'Tv Show 04'),
             ],
           ),
         ),
