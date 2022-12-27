@@ -12,6 +12,10 @@ class AppHome extends StatefulWidget {
 class _AppHomeState extends State<AppHome> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("holas"), //falta definir  aquien llama
+      ),
+    );
   }
 }
